@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Emojimenu : An Android Library that allows you to easily add emoji support to your Android application">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Emojimenu</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/pestrada/emojimenu">View on GitHub</a>
+
+          <h1 id="project_title">Emojimenu</h1>
+          <h2 id="project_tagline">An Android Library that allows you to easily add emoji support to your Android application</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/pestrada/emojimenu/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/pestrada/emojimenu/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="emojimenu" class="anchor" href="#emojimenu" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmojiMenu</h1>
+
+<p><a href="https://travis-ci.org/crowdint/emojimenu"><img src="https://travis-ci.org/crowdint/emojimenu.png?branch=master" alt="Build Status"></a></p>
+
+<p>EmojiMenu is an Android Library that allows you to easily add emoji support to your Android application.</p>
+
+<p>The library works by binding two Android Views:</p>
+
+<ul>
+<li><p>The Trigger View: shows the emoji menu with the list of images.</p></li>
+<li><p>The Input View: receives the symbol code of the selected image.</p></li>
+</ul>
+
+<h1>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h1>
+
+<p>1- Include the EmojiMenu directory as an Android Library Project in your application.</p>
+
+<p>2- Create an 'emojis' folder in your application's assets folder</p>
+
+<p>3- Copy the library emojis assets into your application's emojis or put your own icons in the folder (currently only PNGs are supported).</p>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>Declare an EmojiMenu variable in your Android application and load the Emojis:</p>
+
+<pre><code>EmojiMenu emojiMenu = new EmojiMenu(yourFragmentActivity);
+emojiMenu.getEmojiStore().loadEmojis();
+</code></pre>
+
+<p>Bind your Android Views:</p>
+
+<pre><code>View button = mainActivity.findViewById(yourTriggerView);
+EditText input = (EditText) mainActivity.findViewById(yourInputView);
+emojiMenu.setBinding(button, input);
+</code></pre>
+
+<p><img src="emoji-menu.png" alt="emoji menu">
+<img src="emoji-input.png" alt="emoji input"></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Emojimenu maintained by <a href="https://github.com/pestrada">pestrada</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
